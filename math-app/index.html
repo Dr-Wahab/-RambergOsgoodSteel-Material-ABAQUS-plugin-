@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Math Garden</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <p class="tag">Math for ages 3–10</p>
+          <h1>Happy Math Garden</h1>
+          <p class="subtitle">
+            Grow your garden by solving tiny number puzzles. Earn stars, pick
+            colors, and celebrate every answer!
+          </p>
+        </div>
+        <div class="mascot" aria-hidden="true">🌈🦄</div>
+      </header>
+
+      <section class="panel">
+        <div class="scoreboard">
+          <div class="score">
+            <span>Stars</span>
+            <strong id="stars">0</strong>
+          </div>
+          <div class="score">
+            <span>Streak</span>
+            <strong id="streak">0</strong>
+          </div>
+          <button class="ghost" id="resetScore" type="button">Reset</button>
+        </div>
+
+        <div class="controls">
+          <label class="select">
+            <span>Mode</span>
+            <select id="modeSelect">
+              <option value="count">Count with pictures</option>
+              <option value="add">Addition</option>
+              <option value="sub">Subtraction</option>
+              <option value="mix">Mix it up!</option>
+            </select>
+          </label>
+          <label class="select">
+            <span>Level</span>
+            <select id="levelSelect">
+              <option value="1">Tiny (1-5)</option>
+              <option value="2">Small (1-10)</option>
+              <option value="3">Brave (1-20)</option>
+            </select>
+          </label>
+          <label class="select">
+            <span>Theme</span>
+            <select id="themeSelect">
+              <option value="garden">Garden</option>
+              <option value="space">Space</option>
+              <option value="ocean">Ocean</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="challenge">
+          <div class="prompt" id="prompt">Let’s play!</div>
+          <div class="visual" id="visual" aria-hidden="true"></div>
+          <div class="answer-row">
+            <input
+              id="answerInput"
+              type="number"
+              min="0"
+              placeholder="Your answer"
+              aria-label="Your answer"
+            />
+            <button id="checkBtn" type="button">Check</button>
+          </div>
+          <p class="feedback" id="feedback" role="status"></p>
+        </div>
+      </section>
+
+      <section class="panel tips">
+        <h2>Grown-up helper tips</h2>
+        <ul>
+          <li>Use “Count with pictures” for ages 3–5.</li>
+          <li>Let kids touch the screen and count the emojis.</li>
+          <li>Celebrate every try. The goal is confidence!</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
